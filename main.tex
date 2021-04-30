@@ -1,0 +1,21 @@
+\documentclass{homework}
+
+\title{MATH 849 HW due April 5}
+\author{Yunus Tuncbilek}
+
+\begin{document}
+
+
+%For more information, refer to \url{https://github.com/gijs-pennings/latex-homework}.
+
+\maketitle
+The exercises are from Activity 5 of the MATH 849 course taught in UW-Madison in Spring 2021 by Simon Marshall.
+\exercise[2]
+Let $G = GL_2(\mathbb{Q_p})$. $K=GL_2(\mathbb{Z_p})$. $A$ is the set of diagonal matrices in $G$, and $N$ is the set of matrices with rows $(1,x), (0,1)$. \\
+
+(a): $K'\cdot g\mathbb{Z_p}^2 \subset g\mathbb{Z_p}^2$ for some $g\in G$ -- the $g$ here comes from the compactness of $K'$. Here is the argument that we came up with: Let $U$ be the set of $g\in \mathbb{K'}$ stabilizing $Z_p^2$. $gU$ is an open cover of $K'$. then there is a subcover $g_1U \cup \cdots \cup g_nU$. $U$ here is basically $K'\cap GL_2(\mathbb{Z_p})$. Let $g$ be the sum of $g_1, \cdots, g_n$. $gZ_p^2$ is a lattice, and $K'$ should fix it. Knowing the existence of such a stabilized lattice, we can say $g^{-1}K'g \cdot \mathbb{Z_p}^2 \subset \mathbb{Z_p}^2$ which means $g^{-1}K'g \subset K = GL_2(\mathbb{Z_p})$.
+
+
+(b): Identify $G/K$ with the set of lattices in $\mathbb{Q_p}^2$. Then, Cartan Decomposition requires us to show that $NA$ can send $Z_p^2$ to any given lattice. First, we want to show that for any lattice with basis $(x,y),(z,w)$, we could assume without generality that $y$ is 0. Here is why: WLOG suppose $|y|_p \leq |w|_p$. Then $|\frac{y}{w}|_p \leq 1$ which means that $y/w \in \mathbb{Z_p}.$ Thus we could consider the following linear combination: $(x,y)-y/w(z,w) = (x-zy/w,0)$. So, we could assume that $y$ is zero without loss of generality. Now one can find $n$ and $a$ in $N$ and $A$ such that $na$ maps $(1,0), (1,0)$ to the given lattice basis $(x,0), (z,w)$. $n = (1,z/w), (0,1)$ and $a = (x,0), (0,w)$ satisfies the desired property. So we showed the \emph{Iwasawa Decomposition} $G=NAK$ by showing that any $NA$ acts transitively on $G/K$. For the \emph{Cartan decomposition}, we can choose $a\in A$ -- small enough in the $p$-adic norm -- to get the entries of the basis of the lattice in $Z_p^2$. Then there would be an element of $K = GL_2(Z_p)$ that would send this integral basis to $(1,0), (0,1)$ because the matrix of the basis vectors must be invertible.
+
+\end{document}
